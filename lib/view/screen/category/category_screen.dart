@@ -13,42 +13,58 @@ class CategoryScreen extends StatelessWidget {
         title: Text("Category"),
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Obx(() => categoryController.isLoading.isFalse
-                ? Expanded(
-                    child: GridView.builder(
-                        itemCount: categoryController.categoryList.length,
-                        shrinkWrap: true,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          childAspectRatio: 0.8,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
-                        ),
-                        itemBuilder: (context, index) {
-                          var data = categoryController.categoryList[index];
-                          return Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.green,
-                            ),
-                            //color: Colors.green,
-                            child: Column(
-                              children: [
-                                Image.asset(
-                                  "${data.image}",
-                                  fit: BoxFit.cover,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Column(
+            children: [
+              SizedBox(height: 20,),
+              Obx(() => categoryController.isLoading.isFalse
+                  ? Expanded(
+                      child: GridView.builder(
+                          itemCount: categoryController.categoryList.length,
+                          shrinkWrap: true,
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 0.8,
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10,
+                          ),
+                          itemBuilder: (context, index) {
+                            var data = categoryController.categoryList[index];
+                            return Card(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Colors.white,
                                 ),
-                                Text(
-                                    "${categoryController.categoryList[index].name}"),
-                              ],
-                            ),
-                          );
-                        }),
-                  )
-                : CircularProgressIndicator()),
-          ],
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Image.asset(
+                                      "${data.image}",
+                                      fit: BoxFit.cover,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text("${data.name}",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
+                                          SizedBox(height: 5),
+                                          Text("${data.id}",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color: Colors.grey),)
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          }),
+                    )
+                  : CircularProgressIndicator()),
+            ],
+          ),
         ),
       ),
     );
