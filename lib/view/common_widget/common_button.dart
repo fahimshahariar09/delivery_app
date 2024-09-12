@@ -1,3 +1,4 @@
+import 'package:delivery/view/common_widget/common_text.dart';
 import 'package:flutter/material.dart';
 
 class CommonButton extends StatelessWidget {
@@ -22,12 +23,16 @@ class CommonButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Card(
-          color: buttonColor ?? Colors.blue,
-          child: SizedBox(
-            height: buttonHeight ?? 45,
-            width: buttonWidth ?? MediaQuery.sizeOf(context).width,
-            child: Text("data"),
-          )),
+        color: buttonColor ?? Colors.blue,
+        child: SizedBox(
+          height: buttonHeight ?? 45,
+          width: buttonWidth ?? MediaQuery.sizeOf(context).width,
+          child: CommonText(
+            titel: buttonName,
+            fColor: textColor ?? Colors.white,
+          ),
+        ),
+      ),
     );
   }
 }
