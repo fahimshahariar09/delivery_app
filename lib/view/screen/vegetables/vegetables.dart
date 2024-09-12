@@ -1,4 +1,5 @@
 import 'package:delivery/controller/ui_controller/vegetables/vegetables.dart';
+import 'package:delivery/view/common_widget/common_text_field.dart';
 import 'package:delivery/view/screen/vegetables/widget/vegetable_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,6 +20,10 @@ class Vegetables extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
+              Text("Vegetables"),
+              SizedBox(height: 10),
+              CommonTextField(lText: "Search",icon: Icon(Icons.search),),
+              SizedBox(height: 20),
               Obx(() => vegetablesController.isLoading.isFalse
                   ? Expanded(
                       child: Padding(
