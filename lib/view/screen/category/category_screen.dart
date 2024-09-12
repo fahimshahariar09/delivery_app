@@ -1,6 +1,7 @@
 import 'package:delivery/controller/ui_controller/category/category.dart';
 import 'package:delivery/view/common_widget/common_text.dart';
 import 'package:delivery/view/common_widget/common_text_field.dart';
+import 'package:delivery/view/screen/vegetables/vegetables.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -53,7 +54,9 @@ class CategoryScreen extends StatelessWidget {
                           itemBuilder: (context, index) {
                             var data = categoryController.categoryList[index];
                             return InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Get.to(Vegetables());
+                              },
                               child: Card(
                                 child: Container(
                                   decoration: BoxDecoration(
