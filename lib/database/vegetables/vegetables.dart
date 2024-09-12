@@ -9,22 +9,22 @@ class VegetablesList {
       {
         "image_url": "assets/vegetable/cauliflower.png",
         "name": "Purple Cauliflower",
-        "price": "1.85\$ kg"
+        "price": "1.85\$ / kg"
       },
       {
         "image_url": "assets/vegetable/cauliflower.png",
         "name": "Purple Cauliflower",
-        "price": "1.85\$ kg"
+        "price": "1.85\$ / kg"
       },
       {
         "image_url": "assets/vegetable/cauliflower.png",
         "name": "Purple Cauliflower",
-        "price": "1.85\$ kg"
+        "price": "1.85\$ / kg"
       },
       {
         "image_url": "assets/vegetable/cauliflower.png",
         "name": "Purple Cauliflower",
-        "price": "1.85\$ kg"
+        "price": "1.85\$ / kg"
       },
     ]
   };

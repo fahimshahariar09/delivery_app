@@ -30,10 +30,78 @@ class Vegetables extends StatelessWidget {
                             itemBuilder: (context, index) {
                               var data =
                                   vegetablesController.vegetableList[index];
-                              return VegetableCard(
-                                image: '${data.imageurl}',
-                                name: '${data.name}',
-                                price: '${data.price}',
+                              return SizedBox(
+                                height: 160,
+                                width: MediaQuery.sizeOf(context).width,
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                          "${data.imageurl}",
+                                          height: 128,
+                                          width: 177,
+                                          fit: BoxFit.cover,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "${data.name}",
+                                                style: TextStyle(
+                                                    color: Colors.purple,
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w500),
+                                              ),
+                                              SizedBox(
+                                                  height: 10
+                                              ),
+                                              Text(
+                                                "${data.price}",
+                                                style: TextStyle(
+                                                    fontSize: 15, fontWeight: FontWeight.w500),
+                                              ),
+                                              SizedBox(height: 20),
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  InkWell(
+                                                    onTap: (){},
+                                                    child: Container(
+                                                      height: 40,
+                                                      width: 60,
+                                                      decoration: BoxDecoration(
+                                                          borderRadius: BorderRadius.circular(10),
+                                                          border: Border.all(color: Colors.black,width: 1),
+                                                          color: Colors.white),
+                                                      child: Icon(Icons.favorite_border),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 10,
+                                                  ),
+                                                  InkWell(
+                                                    onTap: (){},
+                                                    child: Container(
+                                                      height: 40,
+                                                      width: 60,
+                                                      decoration: BoxDecoration(
+                                                          borderRadius: BorderRadius.circular(10),
+                                                          color: Colors.green),
+                                                      child: Icon(Icons.shopping_cart_outlined),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               );
                             }),
                       ),
@@ -45,4 +113,11 @@ class Vegetables extends StatelessWidget {
       ),
     );
   }
+
+
+  // VegetableCard(
+  // image: '${data.imageurl}',
+  // name: '${data.name}',
+  // price: '${data.price}',
+  // )
 }

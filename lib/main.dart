@@ -1,4 +1,5 @@
 
+import 'package:delivery/view/screen/cart/cart_screen.dart';
 import 'package:delivery/view/screen/vegetables/vegetables.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-        home: Vegetables(),
+        home: CartScreen(),
     );
   }
 }
