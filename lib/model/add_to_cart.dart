@@ -1,7 +1,7 @@
 class AddToCartListModel {
   String? image;
   String? name;
-  int? price;
+  String? price;
 
   AddToCartListModel(this.image, this.name, this.price);
 

@@ -27,9 +27,11 @@ class CommonButton extends StatelessWidget {
         child: SizedBox(
           height: buttonHeight ?? 45,
           width: buttonWidth ?? MediaQuery.sizeOf(context).width,
-          child: CommonText(
-            titel: buttonName,
-            fColor: textColor ?? Colors.white,
+          child: Center(
+            child: CommonText(
+              titel: buttonName,
+              fColor: textColor ?? Colors.white,
+            ),
           ),
         ),
       ),

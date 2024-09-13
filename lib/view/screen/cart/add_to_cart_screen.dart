@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:delivery/controller/ui_controller/add_to_cart/add_to_cart.dart';
+import 'package:delivery/view/common_widget/common_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,49 +12,66 @@ class AddToCartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     AddToCartController addToCartController = Get.put(AddToCartController());
     return Scaffold(
-      appBar: AppBar(
-        title: Text("data"),
-      ),
-      body: SafeArea(
-        child: Obx(() => addToCartController.isLoading.isFalse
-            ? ListView.builder(
-                shrinkWrap: true,
-                itemCount: addToCartController.addtocartList.length,
-                itemBuilder: (context, index) {
-                  return Card(
-                    elevation: 2,
-                    color: Colors.orange,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+        appBar: AppBar(
+          title: Text("Add To Cart",),
+          centerTitle: true,
+        ),
+        body: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: addToCartController.addtocartList.length,
+                  itemBuilder: (context, index) {
+                    var data = addToCartController.addtocartList[index];
+                    return Card(
+                      elevation: 2,
                       child: SizedBox(
-                        height: 150,
+                        height: 100,
                         child: Row(
                           children: [
-                            Row(
-                              children: [
-                                Image.asset(
-                                  "${addToCartController.addtocartList[index].image}",
-                                  height: 10,
-                                  width: 100,
-                                ),
-                                Column(
-                                  children: [
-                                    Text(
-                                        "${addToCartController.addtocartList[index].name}"),
-                                    Text(
-                                        "${addToCartController.addtocartList[index].price}"),
-                                  ],
-                                )
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 5, vertical: 5),
+                              child: Row(
+                                children: [
+                                  Image.asset(
+                                    "${data.image}",
+                                    height: 100,
+                                    width: 110,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Text("${data.name}"),
+                                          Text("${data.price}"),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  IconButton(
+                                      onPressed: () {
+
+                                      }, icon: Icon(Icons.delete)),
+                                ],
+                              ),
                             )
                           ],
                         ),
                       ),
-                    ),
-                  );
-                })
-            : const CircularProgressIndicator()),
-      ),
-    );
+                    );
+                  }),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CommonButton(buttonName: "Cancel",buttonWidth: 150, onTap: (){}),
+                CommonButton(buttonName: "Buy Now", buttonWidth: 150, onTap: () {}),
+              ],
+            )
+          ],
+        ));
   }
 }
