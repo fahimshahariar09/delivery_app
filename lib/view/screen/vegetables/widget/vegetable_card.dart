@@ -37,20 +37,20 @@ class VegetableCard extends StatelessWidget {
                     children: [
                       Text(
                         name,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.purple,
                             fontSize: 15,
                             fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10
                       ),
                       Text(
                         price,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Row(
                         children: [
                           InkWell(
@@ -62,10 +62,10 @@ class VegetableCard extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10),
                                   border: Border.all(color: Colors.black,width: 1),
                                   color: Colors.white),
-                              child: Icon(Icons.favorite_border),
+                              child: const Icon(Icons.favorite_border),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           InkWell(
@@ -76,7 +76,7 @@ class VegetableCard extends StatelessWidget {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Colors.green),
-                              child: Icon(Icons.shopping_cart_outlined),
+                              child: const Icon(Icons.shopping_cart_outlined),
                             ),
                           ),
                         ],

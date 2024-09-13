@@ -1,5 +1,4 @@
 
-import 'dart:developer';
 
 import 'package:delivery/controller/api_controller/vegetables/add_to_cart.dart';
 import 'package:delivery/model/add_to_cart.dart';

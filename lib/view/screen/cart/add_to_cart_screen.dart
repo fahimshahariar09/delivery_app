@@ -1,7 +1,7 @@
-import 'dart:developer';
 
 import 'package:delivery/controller/ui_controller/add_to_cart/add_to_cart.dart';
 import 'package:delivery/view/common_widget/common_button.dart';
+import 'package:delivery/view/common_widget/common_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +13,9 @@ class AddToCartScreen extends StatelessWidget {
     AddToCartController addToCartController = Get.put(AddToCartController());
     return Scaffold(
         appBar: AppBar(
-          title: Text("Add To Cart",),
+          title: const Text(
+            "Add To Cart",
+          ),
           centerTitle: true,
         ),
         body: Column(
@@ -29,6 +31,7 @@ class AddToCartScreen extends StatelessWidget {
                       child: SizedBox(
                         height: 100,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
                               padding: const EdgeInsets.symmetric(
@@ -41,23 +44,29 @@ class AddToCartScreen extends StatelessWidget {
                                     width: 110,
                                     fit: BoxFit.cover,
                                   ),
-                                  Row(
-                                    children: [
-                                      Column(
-                                        children: [
-                                          Text("${data.name}"),
-                                          Text("${data.price}"),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                  IconButton(
-                                      onPressed: () {
-
-                                      }, icon: Icon(Icons.delete)),
                                 ],
                               ),
-                            )
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Column(
+                                  children: [
+                                    CommonText(titel: "${data.name}",fSize: 18,fWeight: FontWeight.w500,),
+                                    CommonText(titel: "${data.price}",fSize: 16,fWeight: FontWeight.w500,),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.delete,
+                                size: 30,
+                                color: Colors.black,
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -67,8 +76,10 @@ class AddToCartScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CommonButton(buttonName: "Cancel",buttonWidth: 150, onTap: (){}),
-                CommonButton(buttonName: "Buy Now", buttonWidth: 150, onTap: () {}),
+                CommonButton(
+                    buttonName: "Cancel", buttonWidth: 150, onTap: () {}),
+                CommonButton(
+                    buttonName: "Buy Now", buttonWidth: 150, onTap: () {}),
               ],
             )
           ],

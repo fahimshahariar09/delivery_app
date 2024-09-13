@@ -11,7 +11,7 @@ class VegetablesDetalis extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Vegetable Detalis",
           style: TextStyle(
             fontSize: 15,
@@ -26,8 +26,8 @@ class VegetablesDetalis extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 10),
-              CommonText(
+              const SizedBox(height: 10),
+              const CommonText(
                 titel: "Image",
                 fWeight: FontWeight.w600,
                 fSize: 18,
@@ -57,37 +57,37 @@ class VegetablesDetalis extends StatelessWidget {
                           );
                         }),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CommonText(
+                      const CommonText(
                         titel: "Purple Cauliflower",
                         fSize: 20,
                         fWeight: FontWeight.bold,
                         fColor: Colors.purpleAccent,
                       ),
-                      SizedBox(height: 10),
-                      CommonText(
+                      const SizedBox(height: 10),
+                      const CommonText(
                         titel: "1.85\$ / kg",
                         fSize: 20,
                         fWeight: FontWeight.bold,
                         fColor: Colors.purpleAccent,
                       ),
-                      SizedBox(height: 10),
-                      CommonText(
+                      const SizedBox(height: 10),
+                      const CommonText(
                         titel: "~ 150 gr / kg",
                         fSize: 16,
                         fWeight: FontWeight.bold,
                         fColor: Colors.green,
                       ),
-                      SizedBox(height: 20),
-                      CommonText(
+                      const SizedBox(height: 20),
+                      const CommonText(
                         titel: "Spain",
                         fSize: 20,
                         fWeight: FontWeight.bold,
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       CommonText(
                         titel:
                             "Lettuce is an annual plant of the daisy family, Asteraceae. It is most often grown as a leaf vegetable, but sometimes for its stem and seeds. Lettuce is most often used for salads, although it is also seen in other kinds of food, such as soups, sandwiches and wraps; it can also be grilled.",
@@ -95,7 +95,7 @@ class VegetablesDetalis extends StatelessWidget {
                         fColor: Colors.purpleAccent.shade100,
                         fWeight: FontWeight.w400,
                       ),
-                      SizedBox(height: 60),
+                      const SizedBox(height: 60),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -104,19 +104,19 @@ class VegetablesDetalis extends StatelessWidget {
                             children: [
                               InkWell(
                                   onTap: () {},
-                                  child: Icon(Icons.minimize_outlined)),
-                              SizedBox(
+                                  child: const Icon(Icons.minimize_outlined)),
+                              const SizedBox(
                                   height: 15,
                                   width: 20,
                                   child: Center(child: Text("1"))),
-                              InkWell(onTap: () {}, child: Icon(Icons.add))
+                              InkWell(onTap: () {}, child: const Icon(Icons.add))
                             ],
                           ),
                           CommonButton(
                               buttonName: "Add To Cart",
                               buttonWidth: 150,
                               onTap: () {
-                                Get.to(AddToCartScreen());
+                                Get.to(const AddToCartScreen());
                               })
                         ],
                       )

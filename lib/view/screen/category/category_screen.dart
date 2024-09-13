@@ -55,7 +55,7 @@ class CategoryScreen extends StatelessWidget {
                             var data = categoryController.categoryList[index];
                             return InkWell(
                               onTap: () {
-                                Get.to(Vegetables());
+                                Get.to(const Vegetables());
                               },
                               child: Card(
                                 child: Container(

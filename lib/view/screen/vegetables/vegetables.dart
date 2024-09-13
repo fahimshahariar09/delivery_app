@@ -12,7 +12,7 @@ class Vegetables extends StatelessWidget {
     VegetablesController vegetablesController = Get.put(VegetablesController());
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Vegetables",
           style: TextStyle(
               fontSize: 18, color: Colors.purple, fontWeight: FontWeight.w500),
@@ -24,17 +24,17 @@ class Vegetables extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Text("Vegetables"),
                 ],
               ),
-              SizedBox(height: 10),
-              CommonTextField(
+              const SizedBox(height: 10),
+              const CommonTextField(
                 lText: "Search",
                 icon: Icon(Icons.search),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Obx(() => vegetablesController.isLoading.isFalse
                   ? Expanded(
                       child: Padding(
@@ -72,16 +72,16 @@ class Vegetables extends StatelessWidget {
                                               children: [
                                                 Text(
                                                   "${data.name}",
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                       color: Colors.purple,
                                                       fontSize: 15,
                                                       fontWeight:
                                                           FontWeight.w500),
                                                 ),
-                                                SizedBox(height: 10),
+                                                const SizedBox(height: 10),
                                                 Text(
                                                   "${data.price}",
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                       fontSize: 15,
                                                       fontWeight:
                                                           FontWeight.w500),
