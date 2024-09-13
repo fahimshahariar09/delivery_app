@@ -1,5 +1,6 @@
 
 import 'package:delivery/view/screen/bottom_navi_bar/bottom_navi_bar.dart';
+import 'package:delivery/view/screen/cart/add_to_cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -104,10 +104,11 @@ class VegetablesDetalis extends StatelessWidget {
                             children: [
                               InkWell(
                                   onTap: () {},
-                                  child: const Icon(Icons.minimize_outlined)),
-                              const SizedBox(
-                                  height: 15,
+                                  child: const Icon(Icons.remove)),
+                               Container(
+                                  height: 20,
                                   width: 20,
+                                  color: Colors.grey,
                                   child: Center(child: Text("1"))),
                               InkWell(onTap: () {}, child: const Icon(Icons.add))
                             ],
