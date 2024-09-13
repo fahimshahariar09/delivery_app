@@ -1,15 +1,14 @@
-import 'package:delivery/controller/ui_controller/vegetables/vegetables.dart';
+
 import 'package:delivery/view/common_widget/common_text.dart';
+import 'package:delivery/view/screen/cart/add_to_cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class VegetablesDetalis extends StatelessWidget {
   const VegetablesDetalis({super.key});
 
-
   @override
   Widget build(BuildContext context) {
-    VegetablesController vegetablesController = Get.put(VegetablesController());
     return Scaffold(
       body: Column(
         children: [
@@ -75,46 +74,33 @@ class VegetablesDetalis extends StatelessWidget {
                           ),
                           SizedBox(height: 20),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   InkWell(
-                                      onTap: () {
-                                      },
-                                      child:
-                                      Icon(Icons.minimize_outlined)),
+                                      onTap: () {},
+                                      child: Icon(Icons.minimize_outlined)),
                                   SizedBox(
                                       height: 15,
                                       width: 20,
-                                      child: Center(child: Text("}"))),
-                                  InkWell(
-                                      onTap: () {
-                                      },
-                                      child: Icon(Icons.add))
+                                      child: Center(child: Text("1"))),
+                                  InkWell(onTap: () {}, child: Icon(Icons.add))
                                 ],
                               ),
-                              InkWell(
-                                onTap: () {},
+                              GestureDetector(
+                                onTap: (){
+                                  Get.to(AddToCartScreen());
+                                },
                                 child: Container(
-                                  height: 45,
-                                  width: 100,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Colors.green),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      // SizedBox(width: 30,),
-                                      Icon(Icons.shopping_cart_outlined),
-                                      //SizedBox(width: 10,),
-                                      Text("Buy Now")
-                                    ],
-                                  ),
-                                ),
+                                    height: 45,
+                                    width: 150,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        color: Colors.green),
+                                    child: Center(child: Text("Add To Cart"))),
                               ),
                             ],
                           )

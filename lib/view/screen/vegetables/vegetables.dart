@@ -48,7 +48,7 @@ class Vegetables extends StatelessWidget {
                                   vegetablesController.vegetableList[index];
                               return InkWell(
                                 onTap: (){
-                                  Get.to(VegetablesDetalis());
+                                  Get.to(const VegetablesDetalis());
                                 },
                                 child: SizedBox(
                                   height: 120,
