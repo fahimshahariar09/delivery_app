@@ -1,3 +1,6 @@
+
+import 'dart:developer';
+
 import 'package:delivery/controller/ui_controller/add_to_cart/add_to_cart.dart';
 import 'package:delivery/view/common_widget/common_button.dart';
 import 'package:delivery/view/common_widget/common_text.dart';
@@ -72,7 +75,10 @@ class AddToCartScreen extends StatelessWidget {
                                     ],
                                   ),
                                   IconButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      addToCartController.deletedFun();
+                                      log("remove");
+                                    },
                                     icon: const Icon(
                                       Icons.delete,
                                       size: 30,
@@ -85,8 +91,8 @@ class AddToCartScreen extends StatelessWidget {
                           );
                         }),
                   )
-                : CircularProgressIndicator()),
-            SizedBox(
+                : const CircularProgressIndicator()),
+            const SizedBox(
               height: 20,
             ),
             CommonButton(buttonName: "Buy Now", buttonWidth: 150, onTap: () {})

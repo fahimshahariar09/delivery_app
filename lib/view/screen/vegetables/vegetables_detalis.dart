@@ -50,7 +50,7 @@ class VegetablesDetalis extends StatelessWidget {
                               height: 110,
                               width: 130,
                               child: Image.asset(
-                                "assets/vegetable/vegetables.png",
+                                "assets/vegetable/cauliflower.png",
                                 // fit: BoxFit.cover,
                               ),
                             ),
@@ -109,7 +109,7 @@ class VegetablesDetalis extends StatelessWidget {
                                   height: 20,
                                   width: 20,
                                   color: Colors.grey,
-                                  child: Center(child: Text("1"))),
+                                  child: const Center(child: Text("1"))),
                               InkWell(onTap: () {}, child: const Icon(Icons.add))
                             ],
                           ),
