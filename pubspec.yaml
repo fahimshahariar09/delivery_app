@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/images/
     - assets/vegetable/
+    - assets/screen/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

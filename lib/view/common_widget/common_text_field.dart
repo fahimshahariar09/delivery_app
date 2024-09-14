@@ -10,7 +10,7 @@ class CommonTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 40,
+      height: 45,
       child: TextField(
        // controller: searchController,
         decoration: InputDecoration(
