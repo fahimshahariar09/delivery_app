@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:delivery/view/screen/payment.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,7 @@ class CheckOut extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Check Out",
           style: TextStyle(
             color: Colors.purple,
@@ -28,15 +27,15 @@ class CheckOut extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Payment method",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 GestureDetector(
                     onTap: () {
-                      Get.to(Payment());
+                      Get.to(const Payment());
                     },
-                    child: Text(
+                    child: const Text(
                       "Change",
                       style: TextStyle(
                           color: Colors.purpleAccent,
@@ -44,27 +43,27 @@ class CheckOut extends StatelessWidget {
                     )),
               ],
             ),
-            SizedBox(height: 15),
-            Row(
+            const SizedBox(height: 15),
+            const Row(
               children: [
                 Icon(Icons.credit_card),
                 SizedBox(width: 10),
                 Text("**** **** **** 4747")
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Delivery address",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 GestureDetector(
                     onTap: () {
-                      Get.to(Payment());
+                      Get.to(const Payment());
                     },
-                    child: Text(
+                    child: const Text(
                       "Change",
                       style: TextStyle(
                           color: Colors.purpleAccent,
@@ -72,8 +71,8 @@ class CheckOut extends StatelessWidget {
                     )),
               ],
             ),
-            SizedBox(height: 10),
-            Row(
+            const SizedBox(height: 10),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -118,19 +117,19 @@ class CheckOut extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Delivery Options",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 GestureDetector(
                     onTap: () {
-                      Get.to(Payment());
+                      Get.to(const Payment());
                     },
-                    child: Text(
+                    child: const Text(
                       "Change",
                       style: TextStyle(
                           color: Colors.purpleAccent,
@@ -138,8 +137,8 @@ class CheckOut extends StatelessWidget {
                     )),
               ],
             ),
-            SizedBox(height: 20),
-            Column(
+            const SizedBox(height: 20),
+            const Column(
               children: [
                 Row(
                   children: [
