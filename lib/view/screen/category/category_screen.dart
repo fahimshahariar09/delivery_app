@@ -38,9 +38,7 @@ class CategoryScreen extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               const CommonTextField(lText: "Search.."),
-              const SizedBox(height: 10),
-              Text("Total item: ${categoryController.categoryList.length}",style:  TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: Colors.black38),),
-              SizedBox(height: 5),
+              const SizedBox(height: 15),
               Obx(() => categoryController.isLoading.isFalse
                   ? Expanded(
                       child: GridView.builder(

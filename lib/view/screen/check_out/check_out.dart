@@ -1,6 +1,8 @@
 import 'dart:developer';
 
+import 'package:delivery/view/screen/payment.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CheckOut extends StatelessWidget {
   const CheckOut({super.key});
@@ -32,7 +34,7 @@ class CheckOut extends StatelessWidget {
                 ),
                 GestureDetector(
                     onTap: () {
-                      log("message");
+                      Get.to(Payment());
                     },
                     child: Text(
                       "Change",
@@ -60,7 +62,7 @@ class CheckOut extends StatelessWidget {
                 ),
                 GestureDetector(
                     onTap: () {
-                      log("message");
+                      Get.to(Payment());
                     },
                     child: Text(
                       "Change",
@@ -126,7 +128,7 @@ class CheckOut extends StatelessWidget {
                 ),
                 GestureDetector(
                     onTap: () {
-                      log("message");
+                      Get.to(Payment());
                     },
                     child: Text(
                       "Change",

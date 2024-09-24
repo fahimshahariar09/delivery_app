@@ -1,4 +1,5 @@
 import 'package:delivery/view/screen/check_out/check_out.dart';
+import 'package:delivery/view/screen/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-        home: CheckOut(),
+        home: SplashScreen(),
     );
   }
 }
