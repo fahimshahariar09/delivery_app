@@ -9,61 +9,65 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 15,
+          ),
           child: Column(
             children: [
-             // SizedBox(height: 15,),
-              CircleAvatar(
+              const SizedBox(
+                height: 15,
+              ),
+              const CircleAvatar(
                 backgroundImage: AssetImage(""),
                 radius: 80,
               ),
               CommonButton(
                   buttonName: "Change Profile", buttonWidth: 250, onTap: () {}),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                 height: 50,
                 width: MediaQuery.sizeOf(context).width,
                 color: Colors.grey,
-                child: Row(
+                child: const Row(
                   children: [
-                    Text("fiest name"),
+                    Text("first name"),
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                 height: 50,
                 width: MediaQuery.sizeOf(context).width,
                 color: Colors.grey,
-                child: Row(
+                child: const Row(
                   children: [
                     Text("last name"),
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                 height: 50,
                 width: MediaQuery.sizeOf(context).width,
                 color: Colors.grey,
-                child: Row(
+                child: const Row(
                   children: [
                     Text("phone"),
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                 height: 50,
                 width: MediaQuery.sizeOf(context).width,
                 color: Colors.grey,
-                child: Row(
+                child: const Row(
                   children: [
                     Text("password"),
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CommonButton(buttonName: "Save", buttonWidth: 150, onTap: () {}),
             ],
           ),
