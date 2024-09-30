@@ -1,5 +1,5 @@
 
-import 'package:delivery/view/screen/payment.dart';
+import 'package:delivery/view/screen/check_out/payment.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
