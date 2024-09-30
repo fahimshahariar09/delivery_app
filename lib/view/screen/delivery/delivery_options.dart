@@ -11,6 +11,13 @@ class DeliveryOptions extends StatelessWidget {
           TextField(),
           TextField(),
           TextField(),
+          TextField(),
+          TextField(),
+          TextField(),
+          TextField(),
+          TextField(),
+          TextField(),
+          TextField(),
         ],
       ),
     );
