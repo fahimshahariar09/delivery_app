@@ -5,6 +5,15 @@ class AddAddress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        children: [
+          Text("data"),
+          Text("data"),
+          Text("data"),
+          Text("data"),
+        ],
+      ),
+    );
   }
 }
