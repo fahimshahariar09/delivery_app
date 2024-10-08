@@ -21,6 +21,12 @@ class PasswordTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
       ),
+      validator: (value){
+        if(value == '' || value == null){
+          return "password can't be empty";
+        }
+        return null;
+      },
     );
   }
 }
