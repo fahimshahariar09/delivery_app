@@ -7,11 +7,27 @@ class EmailTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        focusedBorder: OutlineInputBorder(),
-        border: OutlineInputBorder(),
-        enabledBorder: OutlineInputBorder(),
-        errorBorder: OutlineInputBorder(),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide(color: Colors.red,width: 1),
+        ),
       ),
+      validator: (value){
+        if(value == '' || value == null){
+          return "Email can't be empty";
+        }else if(!(value.toString().contains('.') || value.contains('@'))){
+          return "please your valid email";
+        }
+      },
     );
   }
 }
