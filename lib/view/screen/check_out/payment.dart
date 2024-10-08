@@ -13,7 +13,8 @@ class Payment extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.asset(Appimages.payment)
+          Image.asset(Appimages.payment),
+          
         ],
       ),
     );
