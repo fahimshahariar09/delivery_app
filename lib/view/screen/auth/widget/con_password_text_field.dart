@@ -15,14 +15,13 @@ class ConPasswordTextField extends StatelessWidget {
         ),
         errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.red,width: 1)
-        ),
+            borderSide: const BorderSide(color: Colors.red, width: 1)),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
       ),
-      validator: (value){
-        if(value == '' || value == null){
+      validator: (value) {
+        if (value == '' || value == null) {
           return "password can't be empty";
         }
         return null;
