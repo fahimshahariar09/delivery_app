@@ -13,4 +13,18 @@ class SignInController extends GetxController {
         email: emailController.text, password: passwordController.text);
     isLoading.value = false;
   }
+
+  @override
+  void onInit() {
+    emailController.text = "fahim@gmail.com";
+    passwordController.text = "12345678";
+    super.onInit();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 }
