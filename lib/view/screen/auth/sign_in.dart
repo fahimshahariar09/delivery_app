@@ -10,7 +10,7 @@ class SignIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SignInController signInController =Get.put(SignInController());
+    SignInController signInController = Get.put(SignInController());
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -18,9 +18,13 @@ class SignIn extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 20),
-              EmailTextField(emailController: signInController.emailController,),
+              EmailTextField(
+                emailController: signInController.emailController,
+              ),
               SizedBox(height: 15),
-              PasswordTextField(passwordController: signInController.passwordController,),
+              PasswordTextField(
+                passwordController: signInController.passwordController,
+              ),
               SizedBox(height: 15),
               CommonButton(buttonName: "Sign In", onTap: () {})
             ],
