@@ -8,7 +8,9 @@ class SignInController extends GetxController {
   RxBool isLoading = true.obs;
 
   signinFun() async {
-    await SignInService.signinService(
+    isLoading.value = true;
+    bool status = await SignInService.signinService(
         email: emailController.text, password: passwordController.text);
+    isLoading.value = false;
   }
 }
