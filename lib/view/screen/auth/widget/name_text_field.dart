@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
-class PhoneTextField extends StatelessWidget {
-  const PhoneTextField({super.key, required this.phoneController});
-
-  final TextEditingController phoneController;
+class NameTextField extends StatelessWidget {
+  const NameTextField({super.key});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: phoneController,
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
@@ -16,23 +13,17 @@ class PhoneTextField extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(
+          borderSide: BorderSide(
             color: Colors.red,
             width: 1,
           ),
         ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
       ),
-      validator: (value) {
-        if (value == '' || value == null) {
-          return "phone can't be empty";
-        }
-        return null;
-      },
     );
   }
 }
