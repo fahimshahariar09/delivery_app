@@ -22,6 +22,7 @@ class ConPasswordTextField extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
+        label: const Text("Confram Password"),
       ),
       validator: (value) {
         if (value == '' || value == null) {

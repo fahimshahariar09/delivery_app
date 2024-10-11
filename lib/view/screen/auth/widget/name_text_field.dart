@@ -26,6 +26,7 @@ class NameTextField extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
+        label: const Text("Name"),
       ),
       validator: (value) {
         if (value == '' || value == null) {

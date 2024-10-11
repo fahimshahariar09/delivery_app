@@ -22,6 +22,7 @@ class PasswordTextField extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
+        label: const Text("Password"),
       ),
       validator: (value) {
         if (value == '' || value == null) {

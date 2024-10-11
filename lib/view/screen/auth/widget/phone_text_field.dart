@@ -26,6 +26,8 @@ class PhoneTextField extends StatelessWidget {
             width: 1,
           ),
         ),
+        label: const Text("Phone"),
+
       ),
       validator: (value) {
         if (value == '' || value == null) {
