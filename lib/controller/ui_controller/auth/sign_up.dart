@@ -31,4 +31,14 @@ class SignUpController extends GetxController {
     conpasswordController.text = "12345678";
     super.onInit();
   }
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    phoneController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+    conpasswordController.dispose();
+    super.dispose();
+  }
 }
