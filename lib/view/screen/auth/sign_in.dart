@@ -18,16 +18,18 @@ class SignIn extends StatelessWidget {
           child: Form(
             key: signInController.formKey,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 EmailTextField(
                   emailController: signInController.emailController,
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 PasswordTextField(
                   passwordController: signInController.passwordController,
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 CommonButton(
                     buttonName: "Sign In",
                     onTap: () {
@@ -35,7 +37,9 @@ class SignIn extends StatelessWidget {
                         return;
                       }
                       signInController.signinFun();
-                    })
+                    }),
+                const SizedBox(height: 20),
+                const Text("Already have account? "),
               ],
             ),
           ),
