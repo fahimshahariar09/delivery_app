@@ -1,6 +1,5 @@
 
-import 'package:delivery/view/screen/auth/sign_in.dart';
-import 'package:delivery/view/screen/splash/splash_screen.dart';
+import 'package:delivery/view/screen/auth/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
