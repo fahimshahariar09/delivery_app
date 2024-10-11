@@ -15,7 +15,7 @@ class NameTextField extends StatelessWidget {
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.red,
             width: 1,
           ),
@@ -24,6 +24,12 @@ class NameTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
       ),
+      validator: (value) {
+        if (value == '' || value == null) {
+          return "name can't be empty";
+        }
+        return null;
+      },
     );
   }
 }
