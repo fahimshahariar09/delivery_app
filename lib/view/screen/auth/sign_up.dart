@@ -20,22 +20,22 @@ class SignUp extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               NameTextField(
                 nameController: signUpController.nameController,
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               PhoneTextField(phoneController: signUpController.phoneController),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               EmailTextField(emailController: signUpController.emailController),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               PasswordTextField(
                   passwordController: signUpController.passwordController),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               ConPasswordTextField(
                   conpasswordController:
                       signUpController.conpasswordController),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CommonButton(buttonName: "Sign Up", onTap: () {}),
             ],
           ),
