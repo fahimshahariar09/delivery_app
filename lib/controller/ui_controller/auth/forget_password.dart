@@ -8,4 +8,5 @@ class ForgetPasswordController extends GetxController{
 
   TextEditingController emailController =TextEditingController();
   RxBool isLoading =true.obs;
+  
 }
