@@ -1,5 +1,6 @@
 import 'package:delivery/controller/ui_controller/auth/sign_up.dart';
 import 'package:delivery/view/common_widget/common_button.dart';
+import 'package:delivery/view/screen/auth/sign_in.dart';
 import 'package:delivery/view/screen/auth/widget/con_password_text_field.dart';
 import 'package:delivery/view/screen/auth/widget/email_text_field.dart';
 import 'package:delivery/view/screen/auth/widget/name_text_field.dart';
@@ -36,12 +37,18 @@ class SignUp extends StatelessWidget {
                   conpasswordController:
                       signUpController.conpasswordController),
               const SizedBox(height: 20),
-              CommonButton(buttonName: "Sign Up", onTap: () {
-                if(!signUpController.formKey.currentState!.validate()){
-                  return ;
-                }
-                signUpController.signUpFun();
-              }),
+              Obx(() => signUpController.isLoading.isTrue
+                  ? CommonButton(
+                      buttonName: "Sign Up",
+                      onTap: () {
+                        if (!signUpController.formKey.currentState!
+                            .validate()) {
+                          return;
+                        }
+                        signUpController.signUpFun();
+                        // Get.to(const SignIn());
+                      })
+                  : CircularProgressIndicator()),
             ],
           ),
         ),

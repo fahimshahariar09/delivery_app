@@ -2,6 +2,7 @@ import 'package:delivery/controller/ui_controller/auth/sign_in.dart';
 import 'package:delivery/view/common_widget/common_button.dart';
 import 'package:delivery/view/screen/auth/widget/email_text_field.dart';
 import 'package:delivery/view/screen/auth/widget/password_text_field.dart';
+import 'package:delivery/view/screen/bottom_navi_bar/bottom_navi_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -37,6 +38,7 @@ class SignIn extends StatelessWidget {
                         return;
                       }
                       signInController.signinFun();
+                      Get.to(BottomNaviBar());
                     }),
                 const SizedBox(height: 20),
                 const Text("Already have account? "),
