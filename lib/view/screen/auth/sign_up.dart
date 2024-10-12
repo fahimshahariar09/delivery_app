@@ -36,7 +36,12 @@ class SignUp extends StatelessWidget {
                   conpasswordController:
                       signUpController.conpasswordController),
               const SizedBox(height: 20),
-              CommonButton(buttonName: "Sign Up", onTap: () {}),
+              CommonButton(buttonName: "Sign Up", onTap: () {
+                if(!signUpController.formKey.currentState!.validate()){
+                  return ;
+                }
+                signUpController.signUpFun();
+              }),
             ],
           ),
         ),
