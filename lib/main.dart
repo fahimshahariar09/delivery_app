@@ -1,5 +1,5 @@
 
-import 'package:delivery/view/screen/auth/sign_up.dart';
+import 'package:delivery/view/screen/auth/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-        home: SignUp(),
+        home: SignIn(),
     );
   }
 }

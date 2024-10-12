@@ -1,14 +1,10 @@
-
-
-import 'package:delivery/view/screen/bottom_navi_bar/bottom_navi_bar.dart';
+import 'package:delivery/view/screen/auth/sign_in.dart';
 import 'package:get/get.dart';
 
-class SplashScreenControlller extends GetxController{
-
-
-  Future nextPage()async{
-    await Future.delayed(Duration(seconds: 3));
-    Get.to(BottomNaviBar());
+class SplashScreenControlller extends GetxController {
+  Future nextPage() async {
+    await Future.delayed(const Duration(seconds: 3));
+    Get.to(const SignIn());
   }
 
   @override
@@ -16,5 +12,4 @@ class SplashScreenControlller extends GetxController{
     nextPage();
     super.onInit();
   }
-
 }

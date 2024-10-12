@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<SplashScreenControlller>(
         init: SplashScreenControlller(),
-        builder: (context){
+        builder: (context) {
           return Scaffold(
             body: SafeArea(
               child: Center(
@@ -21,15 +21,23 @@ class SplashScreen extends StatelessWidget {
                     SizedBox(
                       height: 150,
                       width: 150,
-                      child: Image.asset(Appimages.shop,color: Colors.red,),
+                      child: Image.asset(
+                        Appimages.shop,
+                        color: Colors.red,
+                      ),
                     ),
                     SizedBox(height: 10),
-                    CommonText(titel: "Food Delivery",fSize: 18,fWeight: FontWeight.w600,fColor: Colors.red.shade200,),
+                    CommonText(
+                      titel: "Vegetables Market App",
+                      fSize: 18,
+                      fWeight: FontWeight.w600,
+                      fColor: Colors.red.shade200,
+                    ),
                   ],
                 ),
               ),
             ),
           );
-    });
+        });
   }
 }

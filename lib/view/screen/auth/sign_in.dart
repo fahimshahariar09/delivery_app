@@ -30,16 +30,35 @@ class SignIn extends StatelessWidget {
                 PasswordTextField(
                   passwordController: signInController.passwordController,
                 ),
+                SizedBox(height: 15),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "Forget Password",
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ],
+                ),
                 const SizedBox(height: 15),
-                CommonButton(
-                    buttonName: "Sign In",
-                    onTap: () {
-                      if (!signInController.formKey.currentState!.validate()) {
-                        return;
-                      }
-                      signInController.signinFun();
-                      Get.to(const BottomNaviBar());
-                    }),
+                Obx(
+                  () => signInController.isLoading.isTrue
+                      ? CommonButton(
+                          buttonName: "Sign In",
+                          onTap: () {
+                            if (!signInController.formKey.currentState!
+                                .validate()) {
+                              return;
+                            }
+                            signInController.signinFun();
+                            Get.to(const BottomNaviBar());
+                          })
+                      : CircularProgressIndicator(),
+                ),
                 const SizedBox(height: 20),
                 const Text("Already have account? "),
               ],
