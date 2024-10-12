@@ -19,37 +19,40 @@ class SignUp extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Column(
-            children: [
-              const SizedBox(height: 25),
-              NameTextField(
-                nameController: signUpController.nameController,
-              ),
-              const SizedBox(height: 15),
-              PhoneTextField(phoneController: signUpController.phoneController),
-              const SizedBox(height: 15),
-              EmailTextField(emailController: signUpController.emailController),
-              const SizedBox(height: 15),
-              PasswordTextField(
-                  passwordController: signUpController.passwordController),
-              const SizedBox(height: 15),
-              ConPasswordTextField(
-                  conpasswordController:
-                      signUpController.conpasswordController),
-              const SizedBox(height: 20),
-              Obx(() => signUpController.isLoading.isTrue
-                  ? CommonButton(
-                      buttonName: "Sign Up",
-                      onTap: () {
-                        if (!signUpController.formKey.currentState!
-                            .validate()) {
-                          return;
-                        }
-                        signUpController.signUpFun();
-                        // Get.to(const SignIn());
-                      })
-                  : CircularProgressIndicator()),
-            ],
+          child: Form(
+            key: signUpController.formKey,
+            child: Column(
+              children: [
+                const SizedBox(height: 25),
+                NameTextField(
+                  nameController: signUpController.nameController,
+                ),
+                const SizedBox(height: 15),
+                PhoneTextField(phoneController: signUpController.phoneController),
+                const SizedBox(height: 15),
+                EmailTextField(emailController: signUpController.emailController),
+                const SizedBox(height: 15),
+                PasswordTextField(
+                    passwordController: signUpController.passwordController),
+                const SizedBox(height: 15),
+                ConPasswordTextField(
+                    conpasswordController:
+                        signUpController.conpasswordController),
+                const SizedBox(height: 20),
+                Obx(() => signUpController.isLoading.isTrue
+                    ? CommonButton(
+                        buttonName: "Sign Up",
+                        onTap: () {
+                          if (!signUpController.formKey.currentState!
+                              .validate()) {
+                            return;
+                          }
+                          signUpController.signUpFun();
+                          Get.to(const SignIn());
+                        })
+                    : CircularProgressIndicator()),
+              ],
+            ),
           ),
         ),
       ),

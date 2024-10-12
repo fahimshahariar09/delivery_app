@@ -1,5 +1,4 @@
 import 'package:delivery/controller/api_controller/auth/sign_up.dart';
-import 'package:delivery/view/screen/auth/sign_in.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -12,19 +11,15 @@ class SignUpController extends GetxController {
   TextEditingController conpasswordController = TextEditingController();
   RxBool isLoading = true.obs;
 
-  signUpFun() async {
+  signUpFun() {
     isLoading.value = true;
-    bool status = await SignUpService.signupservice(
+   SignUpService.signupservice(
         name: nameController.text,
         phone: phoneController.text,
         email: emailController.text,
         password: passwordController.text,
         conpassword: conpasswordController.text);
     isLoading.value = false;
-
-    if(status){
-      Get.to(const SignIn());
-    }
 
   }
 

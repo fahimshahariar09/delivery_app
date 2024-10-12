@@ -38,7 +38,7 @@ class SignIn extends StatelessWidget {
                         return;
                       }
                       signInController.signinFun();
-                      Get.to(BottomNaviBar());
+                      Get.to(const BottomNaviBar());
                     }),
                 const SizedBox(height: 20),
                 const Text("Already have account? "),

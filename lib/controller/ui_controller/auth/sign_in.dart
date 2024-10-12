@@ -8,10 +8,12 @@ class SignInController extends GetxController {
   TextEditingController passwordController = TextEditingController();
   RxBool isLoading = true.obs;
 
-  signinFun() async {
+  signinFun() {
     isLoading.value = true;
-    bool status = await SignInService.signinService(
-        email: emailController.text, password: passwordController.text);
+    SignInService.signinService(
+      email: emailController.text,
+      password: passwordController.text,
+    );
     isLoading.value = false;
   }
 
