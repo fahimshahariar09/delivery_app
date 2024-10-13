@@ -19,10 +19,14 @@ class ForgetPassword extends StatelessWidget {
               EmailTextField(
                   emailController: forgetPasswordController.emailController),
               const SizedBox(height: 15),
-              const Row(
+               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text("Next"),
+                  GestureDetector(
+                      onTap: (){
+
+                      },
+                      child: Text("Next")),
                 ],
               ),
               const SizedBox(height: 15),
