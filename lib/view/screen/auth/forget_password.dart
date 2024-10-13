@@ -1,4 +1,5 @@
 import 'package:delivery/controller/ui_controller/auth/forget_password.dart';
+import 'package:delivery/view/screen/auth/verification.dart';
 import 'package:delivery/view/screen/auth/widget/email_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,7 +25,7 @@ class ForgetPassword extends StatelessWidget {
                 children: [
                   GestureDetector(
                       onTap: (){
-
+                        Get.to(Verification());
                       },
                       child: Text("Next")),
                 ],
