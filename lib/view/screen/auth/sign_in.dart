@@ -1,5 +1,6 @@
 import 'package:delivery/controller/ui_controller/auth/sign_in.dart';
 import 'package:delivery/view/common_widget/common_button.dart';
+import 'package:delivery/view/screen/auth/forget_password.dart';
 import 'package:delivery/view/screen/auth/widget/email_text_field.dart';
 import 'package:delivery/view/screen/auth/widget/password_text_field.dart';
 import 'package:delivery/view/screen/bottom_navi_bar/bottom_navi_bar.dart';
@@ -34,12 +35,17 @@ class SignIn extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      "Forget Password",
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15,
+                    GestureDetector(
+                      onTap: (){
+                        Get.to(ForgetPassword());
+                      },
+                      child: Text(
+                        "Forget Password",
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 15,
+                        ),
                       ),
                     ),
                   ],

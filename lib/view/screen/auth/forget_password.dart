@@ -11,13 +11,19 @@ class ForgetPassword extends StatelessWidget {
     ForgetPasswordController forgetPasswordController =
         Get.put(ForgetPasswordController());
     return Scaffold(
-      body: Column(
-        children: [
-          EmailTextField(
-              emailController: forgetPasswordController.emailController),
-          Text(
-              "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
-        ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [
+              EmailTextField(
+                  emailController: forgetPasswordController.emailController),
+              SizedBox(height: 15),
+              Text(
+                  "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
+            ],
+          ),
+        ),
       ),
     );
   }
