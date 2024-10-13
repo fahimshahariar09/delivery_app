@@ -18,9 +18,17 @@ class ForgetPassword extends StatelessWidget {
             children: [
               EmailTextField(
                   emailController: forgetPasswordController.emailController),
-              SizedBox(height: 15),
-              Text(
-                  "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number."),
+              const SizedBox(height: 15),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Next"),
+                ],
+              ),
+              const SizedBox(height: 15),
+              const Text(
+                  "Don’t worry ! It happens. Please enter the phone number we will send the OTP in this phone number.")
+
             ],
           ),
         ),
