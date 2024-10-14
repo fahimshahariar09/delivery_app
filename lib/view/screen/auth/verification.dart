@@ -11,25 +11,38 @@ class Verification extends StatelessWidget {
     VerificationController verificationController =
         Get.put(VerificationController());
     return Scaffold(
-      body: Column(
-        children: [
-          Row(
-            children: [
-              VerifyField(
-                verifiyController: verificationController.numController,
-              ),
-              VerifyField(
-                verifiyController: verificationController.num1Controller,
-              ),
-              VerifyField(
-                verifiyController: verificationController.num2Controller,
-              ),
-              VerifyField(
-                verifiyController: verificationController.num3Controller,
-              ),
-            ],
-          )
-        ],
+      body: SafeArea(
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                VerifyField(
+                  verifiyController: verificationController.numController,
+                ),
+                SizedBox(
+                  width: 25,
+                ),
+                VerifyField(
+                  verifiyController: verificationController.num1Controller,
+                ),
+                SizedBox(
+                  width: 25,
+                ),
+                VerifyField(
+                  verifiyController: verificationController.num2Controller,
+                ),
+                SizedBox(
+                  width: 25,
+                ),
+                VerifyField(
+                  verifiyController: verificationController.num3Controller,
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
