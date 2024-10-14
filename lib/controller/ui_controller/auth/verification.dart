@@ -18,4 +18,13 @@ class VerificationController extends GetxController {
         num3: num3Controller.text);
     isLoading.value = false;
   }
+
+  @override
+  void onInit() {
+    numController.text = "5";
+    num1Controller.text = "7";
+    num2Controller.text = "4";
+    num3Controller.text = "2";
+    super.onInit();
+  }
 }
