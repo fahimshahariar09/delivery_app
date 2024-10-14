@@ -1,5 +1,4 @@
 import 'package:delivery/controller/ui_controller/auth/verification.dart';
-import 'package:delivery/view/common_widget/common_button.dart';
 import 'package:delivery/view/screen/auth/widget/verify_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,26 +16,26 @@ class Verification extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   VerifyField(
                     verifiyController: verificationController.numController,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 25,
                   ),
                   VerifyField(
                     verifiyController: verificationController.num1Controller,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 25,
                   ),
                   VerifyField(
                     verifiyController: verificationController.num2Controller,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 25,
                   ),
                   VerifyField(
@@ -44,7 +43,7 @@ class Verification extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
@@ -57,7 +56,16 @@ class Verification extends StatelessWidget {
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Center(child: Text("Confram",)),
+                      child: const Center(
+                        child: Text(
+                          "Confram",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
