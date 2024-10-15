@@ -6,4 +6,5 @@ class NewPasswordController extends GetxController {
   TextEditingController newpassController = TextEditingController();
   TextEditingController newconpassController = TextEditingController();
   RxBool isLoading = true.obs;
+
 }
