@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class PasswordTextField extends StatelessWidget {
-  const PasswordTextField({super.key, required this.passwordController});
+  const PasswordTextField(
+      {super.key, required this.passwordController, this.lText});
 
   final TextEditingController passwordController;
+  final String? lText;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class PasswordTextField extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        label: const Text("Password"),
+        labelText: lText,
       ),
       validator: (value) {
         if (value == '' || value == null) {

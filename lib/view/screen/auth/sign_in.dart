@@ -30,6 +30,7 @@ class SignIn extends StatelessWidget {
                 const SizedBox(height: 15),
                 PasswordTextField(
                   passwordController: signInController.passwordController,
+                  lText: "Password",
                 ),
                 SizedBox(height: 15),
                 Row(

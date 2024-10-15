@@ -14,7 +14,9 @@ class NewPassword extends StatelessWidget {
         child: Column(
           children: [
             PasswordTextField(passwordController: controller.oldpassController),
+            SizedBox(height: 15),
             PasswordTextField(passwordController: controller.newpassController),
+            SizedBox(height: 15),
             PasswordTextField(
                 passwordController: controller.newconpassController),
           ],
