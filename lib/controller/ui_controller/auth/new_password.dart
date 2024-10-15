@@ -28,4 +28,12 @@ class NewPasswordController extends GetxController {
     newconpassController.text = "123456789";
     super.onInit();
   }
+
+  @override
+  void dispose() {
+    oldpassController.dispose();
+    newpassController.dispose();
+    newconpassController.dispose();
+    super.dispose();
+  }
 }

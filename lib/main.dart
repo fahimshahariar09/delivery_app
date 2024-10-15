@@ -1,4 +1,5 @@
 
+import 'package:delivery/view/screen/auth/new_password.dart';
 import 'package:delivery/view/screen/auth/sign_in.dart';
 import 'package:delivery/view/screen/auth/verification.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-        home: Verification(),
+        home: NewPassword(),
     );
   }
 }
