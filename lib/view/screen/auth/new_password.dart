@@ -13,12 +13,18 @@ class NewPassword extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            PasswordTextField(passwordController: controller.oldpassController),
+            PasswordTextField(passwordController: controller.oldpassController,
+              lText: "Old Password",
+            ),
             SizedBox(height: 15),
-            PasswordTextField(passwordController: controller.newpassController),
+            PasswordTextField(passwordController: controller.newpassController,
+              lText: "New Password",
+            ),
             SizedBox(height: 15),
             PasswordTextField(
-                passwordController: controller.newconpassController),
+                passwordController: controller.newconpassController,
+              lText: "Confram Password",
+            ),
           ],
         ),
       ),

@@ -28,12 +28,16 @@ class SignUp extends StatelessWidget {
                   nameController: signUpController.nameController,
                 ),
                 const SizedBox(height: 15),
-                PhoneTextField(phoneController: signUpController.phoneController),
+                PhoneTextField(
+                    phoneController: signUpController.phoneController),
                 const SizedBox(height: 15),
-                EmailTextField(emailController: signUpController.emailController),
+                EmailTextField(
+                    emailController: signUpController.emailController),
                 const SizedBox(height: 15),
                 PasswordTextField(
-                    passwordController: signUpController.passwordController),
+                  lText: "Password",
+                  passwordController: signUpController.passwordController,
+                ),
                 const SizedBox(height: 15),
                 ConPasswordTextField(
                     conpasswordController:
