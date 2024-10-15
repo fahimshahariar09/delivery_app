@@ -1,11 +1,15 @@
-
-
 import 'dart:developer';
 
-class NewPasswordService{
+class NewPasswordService {
+  static Future newpasswordService() async {
+    try {
 
-  static Future newpasswordService()async{
-    try{}catch (e){log("error $e");}
+      await Future.delayed(const Duration(seconds: 3));
+      return true;
+
+    } catch (e) {
+      log("error $e");
+    }
+    return false;
   }
-
 }
