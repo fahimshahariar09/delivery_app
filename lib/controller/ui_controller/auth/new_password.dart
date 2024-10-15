@@ -1,3 +1,4 @@
+import 'package:delivery/controller/api_controller/auth/new_password.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -6,5 +7,9 @@ class NewPasswordController extends GetxController {
   TextEditingController newpassController = TextEditingController();
   TextEditingController newconpassController = TextEditingController();
   RxBool isLoading = true.obs;
+
+  newpasswordFun()async{
+    bool status = await NewPasswordService.newpasswordService(oldpassword: oldpassController.text, newpassword: newpassController.text, newconpassword: newconpassController.text);
+  }
 
 }

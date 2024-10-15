@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 class NewPasswordService {
-  static Future newpasswordService() async {
+  static Future newpasswordService({required String oldpassword,required String newpassword,required String newconpassword,}) async {
     try {
 
       await Future.delayed(const Duration(seconds: 3));
