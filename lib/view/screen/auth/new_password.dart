@@ -1,4 +1,6 @@
 import 'package:delivery/controller/ui_controller/auth/new_password.dart';
+import 'package:delivery/view/common_widget/common_button.dart';
+import 'package:delivery/view/screen/auth/sign_in.dart';
 import 'package:delivery/view/screen/auth/widget/password_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,21 +13,33 @@ class NewPassword extends StatelessWidget {
     NewPasswordController controller = Get.put(NewPasswordController());
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            PasswordTextField(passwordController: controller.oldpassController,
-              lText: "Old Password",
-            ),
-            SizedBox(height: 15),
-            PasswordTextField(passwordController: controller.newpassController,
-              lText: "New Password",
-            ),
-            SizedBox(height: 15),
-            PasswordTextField(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [
+              PasswordTextField(
+                passwordController: controller.oldpassController,
+                lText: "Old Password",
+              ),
+              const SizedBox(height: 15),
+              PasswordTextField(
+                passwordController: controller.newpassController,
+                lText: "New Password",
+              ),
+              const SizedBox(height: 15),
+              PasswordTextField(
                 passwordController: controller.newconpassController,
-              lText: "Confram Password",
-            ),
-          ],
+                lText: "Confram Password",
+              ),
+              const SizedBox(height: 25),
+              CommonButton(
+                  buttonName: "Confram",
+                  buttonWidth: 200,
+                  onTap: () {
+                    Get.to(const SignIn());
+                  })
+            ],
+          ),
         ),
       ),
     );
