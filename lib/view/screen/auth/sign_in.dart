@@ -32,15 +32,15 @@ class SignIn extends StatelessWidget {
                   passwordController: signInController.passwordController,
                   lText: "Password",
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     GestureDetector(
                       onTap: (){
-                        Get.to(ForgetPassword());
+                        Get.to(const ForgetPassword());
                       },
-                      child: Text(
+                      child: const Text(
                         "Forget Password",
                         style: TextStyle(
                           color: Colors.red,
@@ -64,7 +64,7 @@ class SignIn extends StatelessWidget {
                             signInController.signinFun();
                             Get.to(const BottomNaviBar());
                           })
-                      : CircularProgressIndicator(),
+                      : const CircularProgressIndicator(),
                 ),
                 const SizedBox(height: 20),
                 const Text("Already have account? "),

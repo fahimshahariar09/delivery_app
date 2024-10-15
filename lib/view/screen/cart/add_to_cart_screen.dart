@@ -97,7 +97,7 @@ class AddToCartScreen extends StatelessWidget {
               height: 20,
             ),
             CommonButton(buttonName: "Buy Now", buttonWidth: 150, onTap: () {
-              Get.to(CheckOut());
+              Get.to(const CheckOut());
             })
           ],
         ),

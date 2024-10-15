@@ -1,7 +1,5 @@
 
 import 'package:delivery/view/screen/auth/new_password.dart';
-import 'package:delivery/view/screen/auth/sign_in.dart';
-import 'package:delivery/view/screen/auth/verification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -9,9 +9,9 @@ class AddToCartController extends GetxController {
   RxBool isLoading = false.obs;
 
   addtocartFun() async {
-    // isLoading.value = true;
+    isLoading.value = true;
     addtocartList = await AddToCartService.addtocartService();
-    // isLoading.value = false;
+    isLoading.value = false;
   }
 
   deletedFun(){

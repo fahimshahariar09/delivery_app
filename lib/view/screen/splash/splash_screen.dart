@@ -26,7 +26,7 @@ class SplashScreen extends StatelessWidget {
                         color: Colors.red,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     CommonText(
                       titel: "Vegetables Market App",
                       fSize: 18,

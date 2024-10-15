@@ -54,7 +54,7 @@ class SignUp extends StatelessWidget {
                           signUpController.signUpFun();
                           Get.to(const SignIn());
                         })
-                    : CircularProgressIndicator()),
+                    : const CircularProgressIndicator()),
               ],
             ),
           ),
