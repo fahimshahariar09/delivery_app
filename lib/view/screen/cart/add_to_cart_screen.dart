@@ -62,14 +62,14 @@ class AddToCartScreen extends StatelessWidget {
                                       Column(
                                         children: [
                                           CustomTextWidget(
-                                            titel: "${data.name}",
-                                            fSize: 18,
-                                            fWeight: FontWeight.w500,
+                                            text: "${data.name}",
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w500,
                                           ),
                                           CustomTextWidget(
-                                            titel: "${data.price}",
-                                            fSize: 16,
-                                            fWeight: FontWeight.w500,
+                                            text: "${data.price}",
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500,
                                           ),
                                         ],
                                       ),
@@ -96,7 +96,7 @@ class AddToCartScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            CustomButton(buttonName: "Buy Now", buttonWidth: 150, onTap: () {
+            CustomButton(text: "Buy Now", buttonWidth: 150, onTap: () {
               Get.to(const CheckOut());
             })
           ],
