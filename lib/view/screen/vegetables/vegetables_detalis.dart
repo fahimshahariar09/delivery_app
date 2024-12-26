@@ -1,5 +1,5 @@
 import 'package:delivery/view/common_widget/custom_button.dart';
-import 'package:delivery/view/common_widget/common_text.dart';
+import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:delivery/view/screen/cart/add_to_cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +27,7 @@ class VegetablesDetalis extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
-              const CommonText(
+              const CustomTextWidget(
                 titel: "Image",
                 fWeight: FontWeight.w600,
                 fSize: 18,
@@ -61,34 +61,34 @@ class VegetablesDetalis extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const CommonText(
+                      const CustomTextWidget(
                         titel: "Purple Cauliflower",
                         fSize: 20,
                         fWeight: FontWeight.bold,
                         fColor: Colors.purpleAccent,
                       ),
                       const SizedBox(height: 10),
-                      const CommonText(
+                      const CustomTextWidget(
                         titel: "1.85\$ / kg",
                         fSize: 20,
                         fWeight: FontWeight.bold,
                         fColor: Colors.purpleAccent,
                       ),
                       const SizedBox(height: 10),
-                      const CommonText(
+                      const CustomTextWidget(
                         titel: "~ 150 gr / kg",
                         fSize: 16,
                         fWeight: FontWeight.bold,
                         fColor: Colors.green,
                       ),
                       const SizedBox(height: 20),
-                      const CommonText(
+                      const CustomTextWidget(
                         titel: "Spain",
                         fSize: 20,
                         fWeight: FontWeight.bold,
                       ),
                       const SizedBox(height: 10),
-                      CommonText(
+                      CustomTextWidget(
                         titel:
                             "Lettuce is an annual plant of the daisy family, Asteraceae. It is most often grown as a leaf vegetable, but sometimes for its stem and seeds. Lettuce is most often used for salads, although it is also seen in other kinds of food, such as soups, sandwiches and wraps; it can also be grilled.",
                         maxLine: 7,

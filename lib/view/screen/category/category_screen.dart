@@ -1,5 +1,5 @@
 import 'package:delivery/controller/ui_controller/category/category.dart';
-import 'package:delivery/view/common_widget/common_text.dart';
+import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:delivery/view/common_widget/common_text_field.dart';
 import 'package:delivery/view/screen/vegetables/vegetables.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,7 @@ class CategoryScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              const CommonText(
+              const CustomTextWidget(
                 titel: "Category",
                 fSize: 18,
                 fWeight: FontWeight.bold,

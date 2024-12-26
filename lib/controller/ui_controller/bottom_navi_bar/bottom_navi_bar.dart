@@ -16,7 +16,7 @@ class BottomNaviBarController extends GetxController{
   RxList<Widget> bottomBarPage =[
     const CategoryScreen(),
      const AddToCartScreen(),
-    const ProfileScreen(),
+    //const ProfileScreen(),
   ].obs;
 
   @override

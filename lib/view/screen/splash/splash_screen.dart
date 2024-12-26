@@ -1,6 +1,6 @@
 import 'package:delivery/constants/splash.dart';
 import 'package:delivery/controller/ui_controller/splash/splash_screen.dart';
-import 'package:delivery/view/common_widget/common_text.dart';
+import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -27,7 +27,7 @@ class SplashScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    CommonText(
+                    CustomTextWidget(
                       titel: "Vegetables Market App",
                       fSize: 18,
                       fWeight: FontWeight.w600,

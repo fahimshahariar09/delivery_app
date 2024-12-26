@@ -3,7 +3,7 @@ import 'dart:developer';
 
 import 'package:delivery/controller/ui_controller/add_to_cart/add_to_cart.dart';
 import 'package:delivery/view/common_widget/custom_button.dart';
-import 'package:delivery/view/common_widget/common_text.dart';
+import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:delivery/view/screen/check_out/check_out.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -61,12 +61,12 @@ class AddToCartScreen extends StatelessWidget {
                                     children: [
                                       Column(
                                         children: [
-                                          CommonText(
+                                          CustomTextWidget(
                                             titel: "${data.name}",
                                             fSize: 18,
                                             fWeight: FontWeight.w500,
                                           ),
-                                          CommonText(
+                                          CustomTextWidget(
                                             titel: "${data.price}",
                                             fSize: 16,
                                             fWeight: FontWeight.w500,
