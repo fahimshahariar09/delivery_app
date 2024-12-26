@@ -1,4 +1,4 @@
-import 'package:delivery/view/common_widget/common_button.dart';
+import 'package:delivery/view/common_widget/custom_button.dart';
 import 'package:delivery/view/common_widget/common_text.dart';
 import 'package:delivery/view/screen/cart/add_to_cart_screen.dart';
 import 'package:flutter/material.dart';
@@ -113,7 +113,7 @@ class VegetablesDetalis extends StatelessWidget {
                               InkWell(onTap: () {}, child: const Icon(Icons.add))
                             ],
                           ),
-                          CommonButton(
+                          CustomButton(
                               buttonName: "Add To Cart",
                               buttonWidth: 150,
                               onTap: () {

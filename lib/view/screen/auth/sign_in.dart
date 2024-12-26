@@ -1,5 +1,5 @@
 import 'package:delivery/controller/ui_controller/auth/sign_in.dart';
-import 'package:delivery/view/common_widget/common_button.dart';
+import 'package:delivery/view/common_widget/custom_button.dart';
 import 'package:delivery/view/screen/auth/forget_password.dart';
 import 'package:delivery/view/screen/auth/widget/email_text_field.dart';
 import 'package:delivery/view/screen/auth/widget/password_text_field.dart';
@@ -54,7 +54,7 @@ class SignIn extends StatelessWidget {
                 const SizedBox(height: 15),
                 Obx(
                   () => signInController.isLoading.isTrue
-                      ? CommonButton(
+                      ? CustomButton(
                           buttonName: "Sign In",
                           onTap: () {
                             if (!signInController.formKey.currentState!

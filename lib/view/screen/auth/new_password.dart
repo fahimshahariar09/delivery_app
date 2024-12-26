@@ -1,5 +1,5 @@
 import 'package:delivery/controller/ui_controller/auth/new_password.dart';
-import 'package:delivery/view/common_widget/common_button.dart';
+import 'package:delivery/view/common_widget/custom_button.dart';
 import 'package:delivery/view/screen/auth/sign_in.dart';
 import 'package:delivery/view/screen/auth/widget/password_text_field.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +32,7 @@ class NewPassword extends StatelessWidget {
                 lText: "Confram Password",
               ),
               const SizedBox(height: 25),
-              CommonButton(
+              CustomButton(
                   buttonName: "Confram",
                   buttonWidth: 200,
                   onTap: () {
