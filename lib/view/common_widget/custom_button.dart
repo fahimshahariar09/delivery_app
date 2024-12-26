@@ -1,6 +1,6 @@
+import 'package:delivery/utlis/app_colors.dart';
+import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:flutter/material.dart';
-import 'package:profile/utlis/theme/app_colors.dart';
-import 'package:profile/view/common_widget/custom_text.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.text, required this.onTap,   this.buttonWidth});
