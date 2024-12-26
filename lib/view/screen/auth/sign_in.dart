@@ -55,7 +55,7 @@ class SignIn extends StatelessWidget {
                 Obx(
                   () => signInController.isLoading.isTrue
                       ? CustomButton(
-                          buttonName: "Sign In",
+                          text: "Sign In",
                           onTap: () {
                             if (!signInController.formKey.currentState!
                                 .validate()) {

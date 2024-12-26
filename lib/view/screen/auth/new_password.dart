@@ -33,7 +33,7 @@ class NewPassword extends StatelessWidget {
               ),
               const SizedBox(height: 25),
               CustomButton(
-                  buttonName: "Confram",
+                  text: "Confram",
                   buttonWidth: 200,
                   onTap: () {
                     Get.to(const SignIn());

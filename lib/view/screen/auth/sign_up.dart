@@ -45,7 +45,7 @@ class SignUp extends StatelessWidget {
                 const SizedBox(height: 20),
                 Obx(() => signUpController.isLoading.isTrue
                     ? CustomButton(
-                        buttonName: "Sign Up",
+                        text: "Sign Up",
                         onTap: () {
                           if (!signUpController.formKey.currentState!
                               .validate()) {
