@@ -28,9 +28,9 @@ class VegetablesDetalis extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
               const CustomTextWidget(
-                titel: "Image",
-                fWeight: FontWeight.w600,
-                fSize: 18,
+                text: "Image",
+                fontWeight: FontWeight.w600,
+                fontSize: 18,
               ),
               Column(
                 children: [
@@ -62,38 +62,38 @@ class VegetablesDetalis extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const CustomTextWidget(
-                        titel: "Purple Cauliflower",
-                        fSize: 20,
-                        fWeight: FontWeight.bold,
-                        fColor: Colors.purpleAccent,
+                        text: "Purple Cauliflower",
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        fontColor: Colors.purpleAccent,
                       ),
                       const SizedBox(height: 10),
                       const CustomTextWidget(
-                        titel: "1.85\$ / kg",
-                        fSize: 20,
-                        fWeight: FontWeight.bold,
-                        fColor: Colors.purpleAccent,
+                        text: "1.85\$ / kg",
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        fontColor: Colors.purpleAccent,
                       ),
                       const SizedBox(height: 10),
                       const CustomTextWidget(
-                        titel: "~ 150 gr / kg",
-                        fSize: 16,
-                        fWeight: FontWeight.bold,
-                        fColor: Colors.green,
+                        text: "~ 150 gr / kg",
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontColor: Colors.green,
                       ),
                       const SizedBox(height: 20),
                       const CustomTextWidget(
-                        titel: "Spain",
-                        fSize: 20,
-                        fWeight: FontWeight.bold,
+                        text: "Spain",
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
                       const SizedBox(height: 10),
                       CustomTextWidget(
-                        titel:
+                        text:
                             "Lettuce is an annual plant of the daisy family, Asteraceae. It is most often grown as a leaf vegetable, but sometimes for its stem and seeds. Lettuce is most often used for salads, although it is also seen in other kinds of food, such as soups, sandwiches and wraps; it can also be grilled.",
                         maxLine: 7,
-                        fColor: Colors.purpleAccent.shade100,
-                        fWeight: FontWeight.w400,
+                        fontColor: Colors.purpleAccent.shade100,
+                        fontWeight: FontWeight.w400,
                       ),
                       const SizedBox(height: 60),
                       Row(
@@ -114,7 +114,7 @@ class VegetablesDetalis extends StatelessWidget {
                             ],
                           ),
                           CustomButton(
-                              buttonName: "Add To Cart",
+                              text: "Add To Cart",
                               buttonWidth: 150,
                               onTap: () {
                                 Get.to(const AddToCartScreen());
