@@ -1,3 +1,4 @@
+import 'package:delivery/utlis/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -14,7 +15,20 @@ class CustomTextField extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         keyboardType: textInputType ?? TextInputType.text,
-        decoration: InputDecoration(),
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(horizontal: 10),
+          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.cardDarkColor)),
+          errorBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.cardDarkColor)),
+          border: OutlineInputBorder(borderSide: BorderSide(color: AppColors.cardDarkColor)),
+          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.bg1LightColor)),
+          errorStyle: TextStyle(fontSize: 11),
+        ),
+        validator: (value){
+          if(value.toString() == ""){
+            return "field cann't be empty";
+          }
+          return null;
+        },
       ),
     );
   }
