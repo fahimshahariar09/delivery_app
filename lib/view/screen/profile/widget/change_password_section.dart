@@ -1,15 +1,13 @@
+import 'package:delivery/controller/ui_controller/profile.dart';
+import 'package:delivery/utlis/app_colors.dart';
 import 'package:delivery/utlis/common_funcation/common_snackbar_message.dart';
 import 'package:delivery/utlis/common_funcation/internet_connection_checkout.dart';
+import 'package:delivery/view/common_widget/custom_button.dart';
+import 'package:delivery/view/common_widget/custom_loading_button.dart';
+import 'package:delivery/view/common_widget/custom_text.dart';
+import 'package:delivery/view/screen/profile/widget/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:profile/controller/ui_controller/profile.dart';
-import 'package:profile/utlis/common_funcation/common_snackbar_message.dart';
-import 'package:profile/utlis/common_funcation/internet_connection_checkout.dart';
-import 'package:profile/utlis/theme/app_colors.dart';
-import 'package:profile/view/common_widget/custom_button.dart';
-import 'package:profile/view/common_widget/custom_loading_button.dart';
-import 'package:profile/view/common_widget/custom_text.dart';
-import 'package:profile/view/screen/profile/widget/custom_text_field.dart';
 
 class ChangePasswordSection extends StatelessWidget {
   const ChangePasswordSection({super.key});
@@ -24,14 +22,14 @@ class ChangePasswordSection extends StatelessWidget {
           key: profileController.formKey,
           child: Column(
             children: [
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(
+                  Icon(
                     Icons.vpn_key,
                     color: AppColors.bg1LightColor,
                   ),
-                  const SizedBox(width: 10),
+                  SizedBox(width: 10),
                   CustomTextWidget(
                     text: "change_password",
                     fontSize: 22,
@@ -58,7 +56,7 @@ class ChangePasswordSection extends StatelessWidget {
                     () => profileController.isLoading.value
                     ? const CustomLoadingButton(buttonWidth: 150)
                     : CustomButton(
-                  text: "edit".tr,
+                  text: "edit",
                   buttonWidth: 150,
                   onTap: () async {
                     FocusScope.of(context).unfocus();
