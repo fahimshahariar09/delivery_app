@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
 import 'package:delivery/controller/api_controller/auth/change_password.dart';
+import 'package:delivery/controller/api_controller/profile_update.dart';
 import 'package:delivery/controller/local_storage/local_storage.dart';
 import 'package:delivery/utlis/common_funcation/common_snackbar_message.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,7 @@ class ProfileController extends GetxController {
     var status = await Permission.camera.request();
     if (status.isGranted) {
       final pickedFile =
-      await picker.pickImage(source: imageSource, imageQuality: 25);
+          await picker.pickImage(source: imageSource, imageQuality: 25);
       if (pickedFile != null) {
         profileIMG.value = File(pickedFile.path);
       }
