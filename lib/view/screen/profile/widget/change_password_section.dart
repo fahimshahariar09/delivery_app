@@ -67,7 +67,7 @@ class ChangePasswordSection extends StatelessWidget {
                       CommonSnackBarMessage.noInternetConnection();
                       return;
                     }
-                    bool status = await profileController.changePasswordService();
+                   bool status = await profileController.changePasswordService();
                     if (status) {
                       profileController.confPasswordController.clear();
                       profileController.newPasswordController.clear();
