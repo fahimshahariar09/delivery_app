@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
+import 'package:delivery/controller/api_controller/auth/change_password.dart';
+import 'package:delivery/utlis/common_funcation/common_snackbar_message.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -62,8 +64,8 @@ class ProfileController extends GetxController {
 
   Future<bool> changePasswordService() async {
     isLoading.value = true;
-    bool status = await ChangePasswordService.changePasswordService(
-        currentPass: oldPasswordController.text,
+    bool status = await ChangePasswordService.changepasswordService(
+        currentPassword: oldPasswordController.text,
         newPassword: newPasswordController.text,
         confPassword: confPasswordController.text);
     isLoading.value = false;
