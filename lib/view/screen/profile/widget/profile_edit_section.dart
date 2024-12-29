@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:delivery/controller/ui_controller/profile.dart';
 import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ProfileEditSection extends StatelessWidget {
   const ProfileEditSection({super.key});
@@ -24,7 +27,25 @@ class ProfileEditSection extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 InkWell(
-                  onTap: (){},
+                  onTap: () {
+                    profileController.getImage(
+                        imageSource: ImageSource.gallery);
+                  },
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundColor: Colors.grey,
+                        backgroundImage: profileController.profileIMG.value ==
+                                null
+                            ? NetworkImage(
+                                "${profileController.userInfo['profile_image'] ?? ''}")
+                            : FileImage(File(
+                                    profileController.profileIMG.value!.path))
+                                as ImageProvider,
+                      )
+                    ],
+                  ),
                 )
               ],
             )
