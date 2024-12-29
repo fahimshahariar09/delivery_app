@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:delivery/controller/ui_controller/profile.dart';
 import 'package:delivery/view/common_widget/custom_text.dart';
+import 'package:delivery/view/screen/profile/widget/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -33,20 +34,36 @@ class ProfileEditSection extends StatelessWidget {
                   },
                   child: Column(
                     children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundColor: Colors.grey,
-                        backgroundImage: profileController.profileIMG.value ==
-                                null
-                            ? NetworkImage(
-                                "${profileController.userInfo['profile_image'] ?? ''}")
-                            : FileImage(File(
-                                    profileController.profileIMG.value!.path))
-                                as ImageProvider,
-                      )
+                      Obx(() => CircleAvatar(
+                            radius: 40,
+                            backgroundColor: Colors.grey,
+                            backgroundImage: profileController
+                                        .profileIMG.value ==
+                                    null
+                                ? NetworkImage(
+                                    "${profileController.userInfo['profile_image'] ?? ''}")
+                                : FileImage(File(profileController
+                                    .profileIMG.value!.path)) as ImageProvider,
+                          )),
+                      CustomTextWidget(
+                        text: "Tap to change image",
+                        fontSize: 11,
+                      ),
                     ],
                   ),
-                )
+                ),
+                SizedBox(height: 10),
+                CustomTextField(
+                  controller: profileController.nameController,
+                  labelText: "name",
+                ),
+                SizedBox(height: 10),
+                CustomTextField(
+                  controller: profileController.addressController,
+                  labelText: "address",
+                ),
+                SizedBox(height: 10),
+
               ],
             )
           ],
