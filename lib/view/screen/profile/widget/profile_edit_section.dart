@@ -1,6 +1,9 @@
 import 'dart:io';
 
 import 'package:delivery/controller/ui_controller/profile.dart';
+import 'package:delivery/utlis/common_funcation/common_snackbar_message.dart';
+import 'package:delivery/utlis/common_funcation/internet_connection_checkout.dart';
+import 'package:delivery/view/common_widget/custom_button.dart';
 import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:delivery/view/screen/profile/widget/custom_text_field.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +66,21 @@ class ProfileEditSection extends StatelessWidget {
                   labelText: "address",
                 ),
                 SizedBox(height: 10),
-
+                CustomButton(
+                    text: "edit",
+                    onTap: () async {
+                      FocusScope.of(context).unfocus();
+                      if (!await ConnectionChecker.checkConnection()) {
+                        CommonSnackBarMessage.noInternetConnection();
+                        return;
+                      }
+                      bool status =
+                          await profileController.profileUpdateService();
+                      if (status) {
+                        await profileController.getProfileInfo();
+                        Get.back();
+                      }
+                    })
               ],
             )
           ],
