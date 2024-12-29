@@ -21,7 +21,10 @@ class LogOut extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: CustomTextWidget(text: "log out"),
             ),
-            Icon(Icons.logout,color: Colors.black54,),
+            Icon(
+              Icons.logout,
+              color: Colors.black54,
+            ),
           ],
         ),
       ),
