@@ -1,3 +1,4 @@
+import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class LogOut extends StatelessWidget {
@@ -13,6 +14,16 @@ class LogOut extends StatelessWidget {
         elevation: 4,
         surfaceTintColor: Colors.transparent,
         shape: OutlineInputBorder(borderSide: BorderSide.none),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomTextWidget(text: "log out"),
+            ),
+            Icon(Icons.logout,color: Colors.black54,),
+          ],
+        ),
       ),
     );
   }
