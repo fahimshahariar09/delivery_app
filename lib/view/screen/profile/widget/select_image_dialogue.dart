@@ -31,7 +31,14 @@ class SelectImageDialogue extends StatelessWidget {
                   color: AppColors.bg1LightColor,
                 ),
               ),
-
+              InkWell(
+                onTap: galleryButton,
+                child: Icon(
+                  Icons.photo,
+                  size: 30,
+                  color: AppColors.bg1LightColor,
+                ),
+              )
             ],
           )
         ],
