@@ -1,6 +1,9 @@
 import 'package:delivery/controller/local_storage/local_storage.dart';
+import 'package:delivery/controller/ui_controller/profile.dart';
 import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:delivery/view/screen/cart/add_to_cart_screen.dart';
+import 'package:delivery/view/screen/profile/widget/change_password_section.dart';
+import 'package:delivery/view/screen/profile/widget/log_out.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +12,7 @@ class ProfileSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ProfileController profileController = Get.put(ProfileController());
     return SizedBox(
       child: SingleChildScrollView(
         child: Padding(
@@ -39,23 +43,23 @@ class ProfileSection extends StatelessWidget {
                       EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                       child: CustomTextWidget(text: "Language change"),
                     ),
-                    CustomSwitch(
-                      onTap: () {
-                        profileController.languageBN.value
-                            ? Get.updateLocale(const Locale('en', 'US'))
-                            : Get.updateLocale(const Locale('bn', 'BD'));
-                        profileController.languageBN.value
-                            ? LocalData()
-                            .writeData(key: 'languageType', value: 'EN')
-                            : LocalData()
-                            .writeData(key: 'languageType', value: 'BN');
-                        profileController.languageBN.value =
-                        !profileController.languageBN.value;
-                      },
-                      onText: 'EN',
-                      offText: 'BN',
-                      value: profileController.languageBN,
-                    )
+                    // CustomSwitch(
+                    //   onTap: () {
+                    //     profileController.languageBN.value
+                    //         ? Get.updateLocale(const Locale('en', 'US'))
+                    //         : Get.updateLocale(const Locale('bn', 'BD'));
+                    //     profileController.languageBN.value
+                    //         ? LocalData()
+                    //         .writeData(key: 'languageType', value: 'EN')
+                    //         : LocalData()
+                    //         .writeData(key: 'languageType', value: 'BN');
+                    //     profileController.languageBN.value =
+                    //     !profileController.languageBN.value;
+                    //   },
+                    //   onText: 'EN',
+                    //   offText: 'BN',
+                    //   value: profileController.languageBN,
+                    // )
                   ],
                 ),
               ),
@@ -105,7 +109,7 @@ class ProfileSection extends StatelessWidget {
               ),
               InkWell(
                 onTap: () async {
-                  var status = await LogOutService.logoutService();
+                  var status = await .logoutService();
                   if (status) {
                     await LocalData().deleteData(key: "userInfo");
                     await LocalData().deleteData(key: "token");
