@@ -1,3 +1,4 @@
+import 'package:delivery/controller/api_controller/auth/log_out.dart';
 import 'package:delivery/controller/local_storage/local_storage.dart';
 import 'package:delivery/controller/ui_controller/profile.dart';
 import 'package:delivery/view/common_widget/custom_text.dart';
@@ -109,7 +110,7 @@ class ProfileSection extends StatelessWidget {
               ),
               InkWell(
                 onTap: () async {
-                  var status = await .logoutService();
+                  var status = await LogOutService.logoutService();
                   if (status) {
                     await LocalData().deleteData(key: "userInfo");
                     await LocalData().deleteData(key: "token");
