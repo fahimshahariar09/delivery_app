@@ -1,4 +1,8 @@
+import 'package:delivery/controller/local_storage/local_storage.dart';
+import 'package:delivery/view/common_widget/custom_text.dart';
+import 'package:delivery/view/screen/cart/add_to_cart_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfileSection extends StatelessWidget {
   const ProfileSection({super.key});
@@ -105,7 +109,7 @@ class ProfileSection extends StatelessWidget {
                   if (status) {
                     await LocalData().deleteData(key: "userInfo");
                     await LocalData().deleteData(key: "token");
-                    Get.offAll(() => const WelcomePage());
+                    Get.offAll(() => const AddToCartScreen());
                   }
                 },
                 child: Container(
