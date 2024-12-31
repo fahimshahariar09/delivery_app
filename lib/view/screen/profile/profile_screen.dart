@@ -32,8 +32,14 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   InkWell(
                     onTap: (){
-                      Get.to(()=>ImageViewWidget(imageUrl: "${profileController.userInfo['profile_image'] ?? ''}"))
+                      Get.to(()=>ImageViewWidget(imageUrl: "${profileController.userInfo['profile_image'] ?? ''}"));
                     },
+                    child: SizedBox(
+                      height: 10,
+                      child: AspectRatio(aspectRatio: 1,child: ClipOval(
+
+                      ),),
+                    ),
                   )
                 ],
               ),
