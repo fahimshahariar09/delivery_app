@@ -10,8 +10,8 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ProfileController profileController = Get.put(ProfileController());
-    Size size =MediaQuery.sizeOf(context);
-    return  Scaffold(
+    Size size = MediaQuery.sizeOf(context);
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,7 +19,7 @@ class ProfileScreen extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               width: size.width,
-              padding: EdgeInsets.only(top: 70,bottom: 20),
+              padding: EdgeInsets.only(top: 70, bottom: 20),
               decoration: BoxDecoration(
                 color: AppColors.bg1LightColor,
                 borderRadius: BorderRadius.only(
@@ -31,14 +31,22 @@ class ProfileScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: (){
-                      Get.to(()=>ImageViewWidget(imageUrl: "${profileController.userInfo['profile_image'] ?? ''}"));
+                    onTap: () {
+                      Get.to(() => ImageViewWidget(
+                          imageUrl:
+                              "${profileController.userInfo['profile_image'] ?? ''}"));
                     },
                     child: SizedBox(
                       height: 10,
-                      child: AspectRatio(aspectRatio: 1,child: ClipOval(
-
-                      ),),
+                      child: AspectRatio(
+                        aspectRatio: 1,
+                        child: ClipOval(
+                            child: FadeInImage.assetNetwork(
+                          placeholder: "placeholder",
+                          image:
+                              "${profileController.userInfo['profile_image'] ?? ''}",
+                        )),
+                      ),
                     ),
                   )
                 ],
