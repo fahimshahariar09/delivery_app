@@ -45,6 +45,11 @@ class ProfileScreen extends StatelessWidget {
                           placeholder: "placeholder",
                           image:
                               "${profileController.userInfo['profile_image'] ?? ''}",
+                          imageErrorBuilder: (context, o, t) {
+                            return CircleAvatar(
+                              backgroundImage: NetworkImage("url"),
+                            );
+                          },
                         )),
                       ),
                     ),
