@@ -1,5 +1,6 @@
 import 'package:delivery/controller/ui_controller/profile.dart';
 import 'package:delivery/utlis/app_colors.dart';
+import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:delivery/view/common_widget/image_view_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -41,18 +42,36 @@ class ProfileScreen extends StatelessWidget {
                       child: AspectRatio(
                         aspectRatio: 1,
                         child: ClipOval(
-                            child: FadeInImage.assetNetwork(
-                          placeholder: "placeholder",
-                          image:
-                              "${profileController.userInfo['profile_image'] ?? ''}",
-                          imageErrorBuilder: (context, o, t) {
-                            return CircleAvatar(
-                              backgroundImage: NetworkImage("url"),
-                            );
-                          },
-                        )),
+                          child: Obx(
+                            () => FadeInImage.assetNetwork(
+                              placeholder: "placeholder",
+                              image:
+                                  "${profileController.userInfo['profile_image'] ?? ''}",
+                              imageErrorBuilder: (context, o, t) {
+                                return CircleAvatar(
+                                  backgroundImage: NetworkImage("url"),
+                                );
+                              },
+                            ),
+                          ),
+                        ),
                       ),
                     ),
+                  ),
+                  SizedBox(height: 10),
+                  CustomTextWidget(
+                    text:
+                        " ${profileController.userInfo["name"] ?? "please update your name"}",
+                    fontColor: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  CustomTextWidget(
+                    text:
+                        " ${profileController.userInfo["email"] ?? "Empty e-mail"}",
+                    fontColor: Colors.white,
+                    fontWeight: FontWeight.w200,
+                    fontSize: 13,
                   )
                 ],
               ),
