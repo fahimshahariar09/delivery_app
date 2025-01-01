@@ -17,92 +17,96 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              alignment: Alignment.center,
-              width: size.width,
-              padding: EdgeInsets.only(top: 70, bottom: 20),
-              decoration: BoxDecoration(
-                color: AppColors.bg1LightColor,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Get.to(() => ImageViewWidget(
-                          imageUrl:
-                              "${profileController.userInfo['profile_image'] ?? ''}"));
-                    },
-                    child: SizedBox(
-                      height: 10,
-                      child: AspectRatio(
-                        aspectRatio: 1,
-                        child: ClipOval(
-                          child: Obx(
-                            () => FadeInImage.assetNetwork(
-                              placeholder: "placeholder",
-                              image:
-                                  "${profileController.userInfo['profile_image'] ?? ''}",
-                              imageErrorBuilder: (context, o, t) {
-                                return CircleAvatar(
-                                  backgroundImage: NetworkImage("url"),
-                                );
-                              },
+            Stack(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  width: size.width,
+                  padding: EdgeInsets.only(top: 70, bottom: 20),
+                  decoration: BoxDecoration(
+                    color: AppColors.bg1LightColor,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Get.to(() => ImageViewWidget(
+                              imageUrl:
+                                  "${profileController.userInfo['profile_image'] ?? ''}"));
+                        },
+                        child: SizedBox(
+                          height: 10,
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ClipOval(
+                              child: Obx(
+                                () => FadeInImage.assetNetwork(
+                                  placeholder: "placeholder",
+                                  image:
+                                      "${profileController.userInfo['profile_image'] ?? ''}",
+                                  imageErrorBuilder: (context, o, t) {
+                                    return CircleAvatar(
+                                      backgroundImage: NetworkImage("url"),
+                                    );
+                                  },
+                                ),
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  CustomTextWidget(
-                    text:
-                        " ${profileController.userInfo["name"] ?? "please update your name"}",
-                    fontColor: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  CustomTextWidget(
-                    text:
-                        " ${profileController.userInfo["email"] ?? "Empty e-mail"}",
-                    fontColor: Colors.white,
-                    fontWeight: FontWeight.w200,
-                    fontSize: 13,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                      SizedBox(height: 10),
                       CustomTextWidget(
-                        text: "Phone",
+                        text:
+                            " ${profileController.userInfo["name"] ?? "please update your name"}",
                         fontColor: Colors.white,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 13,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
                       ),
                       CustomTextWidget(
-                        text: " : ${profileController.userInfo['phone']}",
+                        text:
+                            " ${profileController.userInfo["email"] ?? "Empty e-mail"}",
                         fontColor: Colors.white,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 13,
-                      ), CustomTextWidget(
-                        text: "address",
-                        fontColor: Colors.white,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w200,
                         fontSize: 13,
                       ),
-                      CustomTextWidget(
-                        text: " : ${profileController.userInfo['address']}",
-                        fontColor: Colors.white,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 13,
-                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CustomTextWidget(
+                            text: "Phone",
+                            fontColor: Colors.white,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 13,
+                          ),
+                          CustomTextWidget(
+                            text: " : ${profileController.userInfo['phone']}",
+                            fontColor: Colors.white,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 13,
+                          ), CustomTextWidget(
+                            text: "address",
+                            fontColor: Colors.white,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 13,
+                          ),
+                          CustomTextWidget(
+                            text: " : ${profileController.userInfo['address']}",
+                            fontColor: Colors.white,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 13,
+                          ),
+                        ],
+                      )
                     ],
-                  )
-                ],
-              ),
+                  ),
+                ),
+              ],
             )
           ],
         ),
