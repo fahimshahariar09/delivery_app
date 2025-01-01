@@ -2,6 +2,7 @@ import 'package:delivery/controller/ui_controller/profile.dart';
 import 'package:delivery/utlis/app_colors.dart';
 import 'package:delivery/view/common_widget/custom_text.dart';
 import 'package:delivery/view/common_widget/image_view_widget.dart';
+import 'package:delivery/view/screen/profile/widget/profile_edit_section.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -89,7 +90,8 @@ class ProfileScreen extends StatelessWidget {
                             fontColor: Colors.white,
                             fontWeight: FontWeight.w400,
                             fontSize: 13,
-                          ), CustomTextWidget(
+                          ),
+                          CustomTextWidget(
                             text: "address",
                             fontColor: Colors.white,
                             fontWeight: FontWeight.w300,
@@ -102,7 +104,21 @@ class ProfileScreen extends StatelessWidget {
                             fontSize: 13,
                           ),
                         ],
-                      )
+                      ),
+                      Positioned(
+                          child: IconButton(
+                              onPressed: () {
+                                showBottomSheet(
+                                    context: context,
+                                    builder: (builder) {
+                                      return ProfileEditSection();
+                                    });
+                              },
+                              icon: Icon(
+                                Icons.edit_note_sharp,
+                                size: 35,
+                                color: Colors.white,
+                              )))
                     ],
                   ),
                 ),
